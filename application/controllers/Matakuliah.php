@@ -1,9 +1,10 @@
 <?php
 class Matakuliah extends CI_Controller
 {
+    function __contruct(){
+        parent::__contruct();
+    }
     public function index()
-
-
     {
         $this->load->view('view-form-matakuliah');
     }
@@ -13,7 +14,7 @@ class Matakuliah extends CI_Controller
         $this->form_validation->set_rules('kode','Kode ', 'required|min_length[4]',
         array(
             'required' => '%s harus diisi.',
-            'min_length'=> '%s Minimal 4 Karakter'
+             'min_length'=> '%s Minimal 4 Karakter'
         )
     );
         $this->form_validation->set_rules('nama','Nama ', 'required',
